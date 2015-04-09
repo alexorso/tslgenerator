@@ -1,0 +1,39 @@
+# File
+  Size:
+      Empty.			
+      Not empty.
+  Number of occurrences of the pattern in the file:
+      None.			
+      One.				
+      Many.				
+  Number of occurrences of the pattern in one line:
+      One.				
+      Many.			
+  Position of the pattern in the file:
+      First line.		
+      Last line.		
+      Any.				
+
+# Pattern
+  Length of the pattern:
+      Empty.			
+      One.			
+      More than one.			
+      Longer than the file.	
+  Presence of enclosing quotes:
+      Not enclosed.			
+      Enclosed.
+      Incorrect.		
+  Presence of blanks:
+      None.
+      One.				
+      Many.				
+  Presence of quotes within the pattern:
+      None.
+      One.				
+      Many.			
+
+# Filename
+  Presence of a file corresponding to the name:
+      Not present.		
+      Present.

@@ -1,0 +1,22 @@
+# Microsoft Developer Studio Generated Dependency File, included by TSLgenerator.mak
+
+.\debug.c : \
+	".\defines.h"\
+	
+
+.\input.c : \
+	".\defines.h"\
+	".\maindefs.h"\
+	".\structs.h"\
+	
+
+.\main.c : \
+	".\defines.h"\
+	".\structs.h"\
+	
+
+.\output.c : \
+	".\defines.h"\
+	".\maindefs.h"\
+	".\structs.h"\
+	

@@ -1,0 +1,39 @@
+# File
+  Size:
+      Empty.			[single][property emptyfile] 
+      Not empty.
+  Number of occurrences of the pattern in the file:
+      None.			[single][if !emptyfile] [property noOccurences]
+      One.				[if !emptyfile]
+      Many.				[if !emptyfile]
+  Number of occurrences of the pattern in one line:
+      One.				[if !noOccurences && !emptyfile]
+      Many.			[single][if !noOccurences && !emptyfile]
+  Position of the pattern in the file:
+      First line.		[single][if !emptyfile]
+      Last line.		[single][if !emptyfile]
+      Any.				[if !emptyfile]
+
+# Pattern
+  Length of the pattern:
+      Empty.			[single][property emptypattern]
+      One.			[single]
+      More than one.			[property patternlengthgt1]
+      Longer than the file.	[single]
+  Presence of enclosing quotes:
+      Not enclosed.			[if !emptypattern]
+      Enclosed.
+      Incorrect.		[error]
+  Presence of blanks:
+      None.
+      One.				[if !emptypattern]
+      Many.				[if !emptypattern && patternlengthgt1]
+  Presence of quotes within the pattern:
+      None.
+      One.				[if !emptypattern]
+      Many.			[single][if !emptypattern && patternlengthgt1]
+
+# Filename
+  Presence of a file corresponding to the name:
+      Not present.		[error]
+      Present.

@@ -1,0 +1,22 @@
+﻿Build started 10/22/2014 12:00:06 PM.
+     1>Project "D:\Dropbox\AlexXiangyu\TSL\Win8\TSLgenerator\TSLgenerator.vcxproj" on node 2 (LibLinkOnly target(s)).
+     1>Link:
+         D:\Programs\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\TSLgenerator.exe" /INCREMENTAL:NO /NOLOGO odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\Release\TSLgenerator.pdb" /SUBSYSTEM:CONSOLE /PGD:".\Release\TSLgenerator.pgd" /LTCG:PGOptimize /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Release\TSLgenerator.lib" /MACHINE:X86 /SAFESEH .\Release\icon.res
+         .\Release\debug.obj
+         .\Release\input.obj
+         .\Release\main.obj
+         .\Release\output.obj
+         Microsoft (R) Incremental Linker Version 12.00.30501.0
+         Copyright (C) Microsoft Corporation.  All rights reserved.
+         
+         "/OUT:.\Release\TSLgenerator.exe" /INCREMENTAL:NO /NOLOGO odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST "/MANIFESTUAC:level='asInvoker' uiAccess='false'" /manifest:embed "/PDB:.\Release\TSLgenerator.pdb" /SUBSYSTEM:CONSOLE "/PGD:.\Release\TSLgenerator.pgd" /LTCG:PGOptimize /TLBID:1 /DYNAMICBASE /NXCOMPAT "/IMPLIB:.\Release\TSLgenerator.lib" /MACHINE:X86 /SAFESEH .\Release\icon.res 
+         .\Release\debug.obj 
+         .\Release\input.obj 
+         .\Release\main.obj 
+         .\Release\output.obj 
+     1>LINK : fatal error LNK1266: error reading instrumentation file '.\Release\TSLgenerator.pgd'; File not found
+     1>Done Building Project "D:\Dropbox\AlexXiangyu\TSL\Win8\TSLgenerator\TSLgenerator.vcxproj" (LibLinkOnly target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.39

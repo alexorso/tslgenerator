@@ -1,0 +1,332 @@
+
+Test Case 1  		<single>
+   Size :  Empty
+
+
+Test Case 2  		<single>
+   Number of occurrences of the pattern in the file :  None
+
+
+Test Case 3  		<single>
+   Number of occurrences of the pattern in one line :  Many
+
+
+Test Case 4  		<single>
+   Position of the pattern in the file :  First line
+
+
+Test Case 5  		<single>
+   Position of the pattern in the file :  Last line
+
+
+Test Case 6  		<single>
+   Length of the pattern :  Empty
+
+
+Test Case 7  		<single>
+   Length of the pattern :  One
+
+
+Test Case 8  		<single>
+   Length of the pattern :  Longer than the file
+
+
+Test Case 9  		<error>
+   Presence of enclosing quotes :  Incorrect
+
+
+Test Case 10 		<single>
+   Presence of quotes within the pattern :  Many
+
+
+Test Case 11 		<error>
+   Presence of a file corresponding to the name :  Not present
+
+
+Test Case 12 		(Key = 2.2.1.3.3.1.1.1.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  One
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Not enclosed
+   Presence of blanks                               :  None
+   Presence of quotes within the pattern            :  None
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 13 		(Key = 2.2.1.3.3.1.1.2.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  One
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Not enclosed
+   Presence of blanks                               :  None
+   Presence of quotes within the pattern            :  One
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 14 		(Key = 2.2.1.3.3.1.2.1.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  One
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Not enclosed
+   Presence of blanks                               :  One
+   Presence of quotes within the pattern            :  None
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 15 		(Key = 2.2.1.3.3.1.2.2.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  One
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Not enclosed
+   Presence of blanks                               :  One
+   Presence of quotes within the pattern            :  One
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 16 		(Key = 2.2.1.3.3.1.3.1.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  One
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Not enclosed
+   Presence of blanks                               :  Many
+   Presence of quotes within the pattern            :  None
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 17 		(Key = 2.2.1.3.3.1.3.2.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  One
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Not enclosed
+   Presence of blanks                               :  Many
+   Presence of quotes within the pattern            :  One
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 18 		(Key = 2.2.1.3.3.2.1.1.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  One
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Enclosed
+   Presence of blanks                               :  None
+   Presence of quotes within the pattern            :  None
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 19 		(Key = 2.2.1.3.3.2.1.2.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  One
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Enclosed
+   Presence of blanks                               :  None
+   Presence of quotes within the pattern            :  One
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 20 		(Key = 2.2.1.3.3.2.2.1.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  One
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Enclosed
+   Presence of blanks                               :  One
+   Presence of quotes within the pattern            :  None
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 21 		(Key = 2.2.1.3.3.2.2.2.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  One
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Enclosed
+   Presence of blanks                               :  One
+   Presence of quotes within the pattern            :  One
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 22 		(Key = 2.2.1.3.3.2.3.1.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  One
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Enclosed
+   Presence of blanks                               :  Many
+   Presence of quotes within the pattern            :  None
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 23 		(Key = 2.2.1.3.3.2.3.2.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  One
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Enclosed
+   Presence of blanks                               :  Many
+   Presence of quotes within the pattern            :  One
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 24 		(Key = 2.3.1.3.3.1.1.1.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  Many
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Not enclosed
+   Presence of blanks                               :  None
+   Presence of quotes within the pattern            :  None
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 25 		(Key = 2.3.1.3.3.1.1.2.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  Many
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Not enclosed
+   Presence of blanks                               :  None
+   Presence of quotes within the pattern            :  One
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 26 		(Key = 2.3.1.3.3.1.2.1.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  Many
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Not enclosed
+   Presence of blanks                               :  One
+   Presence of quotes within the pattern            :  None
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 27 		(Key = 2.3.1.3.3.1.2.2.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  Many
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Not enclosed
+   Presence of blanks                               :  One
+   Presence of quotes within the pattern            :  One
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 28 		(Key = 2.3.1.3.3.1.3.1.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  Many
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Not enclosed
+   Presence of blanks                               :  Many
+   Presence of quotes within the pattern            :  None
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 29 		(Key = 2.3.1.3.3.1.3.2.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  Many
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Not enclosed
+   Presence of blanks                               :  Many
+   Presence of quotes within the pattern            :  One
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 30 		(Key = 2.3.1.3.3.2.1.1.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  Many
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Enclosed
+   Presence of blanks                               :  None
+   Presence of quotes within the pattern            :  None
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 31 		(Key = 2.3.1.3.3.2.1.2.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  Many
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Enclosed
+   Presence of blanks                               :  None
+   Presence of quotes within the pattern            :  One
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 32 		(Key = 2.3.1.3.3.2.2.1.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  Many
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Enclosed
+   Presence of blanks                               :  One
+   Presence of quotes within the pattern            :  None
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 33 		(Key = 2.3.1.3.3.2.2.2.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  Many
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Enclosed
+   Presence of blanks                               :  One
+   Presence of quotes within the pattern            :  One
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 34 		(Key = 2.3.1.3.3.2.3.1.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  Many
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Enclosed
+   Presence of blanks                               :  Many
+   Presence of quotes within the pattern            :  None
+   Presence of a file corresponding to the name     :  Present
+
+
+Test Case 35 		(Key = 2.3.1.3.3.2.3.2.2.)
+   Size                                             :  Not empty
+   Number of occurrences of the pattern in the file :  Many
+   Number of occurrences of the pattern in one line :  One
+   Position of the pattern in the file              :  Any
+   Length of the pattern                            :  More than one
+   Presence of enclosing quotes                     :  Enclosed
+   Presence of blanks                               :  Many
+   Presence of quotes within the pattern            :  One
+   Presence of a file corresponding to the name     :  Present
+
