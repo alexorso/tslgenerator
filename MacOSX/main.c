@@ -45,7 +45,7 @@ int main( int argc, char* argv[] )
 {
     Flag    flags;           /* program flags */
     int     num_frames;
-    char    filename[ 30 ],
+    char    *filename = NULL,
             answer[ 5 ];     /* user response */
 
     printf( "\n----------------------------------------");
@@ -82,13 +82,14 @@ int main( int argc, char* argv[] )
     }
     else
     {
+        filename = malloc(sizeof(char) * strlen(in_file) + 4);
         strcpy( filename, in_file );
         strcat( filename, ".tsl" );
         out_file = filename;
+        free(filename);
     }
-    
     parse_file();
-    
+
     /* **** debug **** */
     #if DEBUG
     debug_info();
@@ -153,8 +154,9 @@ Flag parse_args( int num_args, char* args[] )
                         return flags;
                 }
             }
-        else
-            in_file = args[i];
+        else {
+		in_file = args[i];
+	}
     }
     return flags;
 }
