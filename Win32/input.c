@@ -181,7 +181,7 @@ void parse_constraint( Choice* curr_choice, char* constraint )
         
         constraint += 8;  /* move past the word 'property' */
         
-        while ( sscanf( constraint, " %[^, ] %hn", tmp_cstr, &chars_read ) > 0 )
+        while ( sscanf( constraint, " %[^, ]%n", tmp_cstr, &chars_read ) > 0 )
         {
             tmp_prop = parse_property( tmp_cstr, strlen( tmp_cstr ), TRUE );
             
