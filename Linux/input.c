@@ -410,10 +410,10 @@ char* close_parens( char* start, char* end )
 /* Trim whitespace from both ends of a string bounded by '*start' and '*end' */
 void trim( char** start, char** end )
 {
-    for ( ; *start < *end; *start++ )
+    for ( ; *start < *end; ( *start )++ )
         if ( !isspace( (int) **start ) )
             break;
-    for ( ; *start < *end; *end-- )
+    for ( ; *start < *end; ( *end )-- )
         if ( !isspace( (int) *( *end - 1 ) ) )
             break;
 }
