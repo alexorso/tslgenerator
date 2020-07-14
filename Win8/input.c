@@ -181,7 +181,7 @@ void parse_constraint( Choice* curr_choice, char* constraint )
         
         constraint += 8;  /* move past the word 'property' */
         
-        while ( sscanf( constraint, " %[^, ] %hn", tmp_cstr, &chars_read ) > 0 )
+        while ( sscanf( constraint, " %[^, ]%n", tmp_cstr, &chars_read ) > 0 )
         {
             tmp_prop = parse_property( tmp_cstr, strlen( tmp_cstr ), TRUE );
             
@@ -410,10 +410,10 @@ char* close_parens( char* start, char* end )
 /* Trim whitespace from both ends of a string bounded by '*start' and '*end' */
 void trim( char** start, char** end )
 {
-    for ( ; *start < *end; *start++ )
+    for ( ; *start < *end; ( *start )++ )
         if ( !isspace( (int) **start ) )
             break;
-    for ( ; *start < *end; *end-- )
+    for ( ; *start < *end; ( *end )-- )
         if ( !isspace( (int) *( *end - 1 ) ) )
             break;
 }
