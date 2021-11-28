@@ -1,0 +1,77 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+*"
+
+env:
+  LINUX_APP_NAME: TSLgenerator-linux
+  MACOS_APP_NAME: TSLgenerator-macos
+  WINDOWS_APP_NAME: TSLgenerator.exe
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build release
+      working-directory: ./Linux
+      run: make
+
+    - name: Upload release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        tag: ${{ github.ref }}
+        file: ./Linux/tsl
+        asset_name: ${{ env.LINUX_APP_NAME }}
+        overwrite: true
+
+  build-macos:
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: make
+      working-directory: ./MacOSX
+      run: make
+
+    - name: Upload release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        tag: ${{ github.ref }}
+        file: ./MacOSX/tsl
+        asset_name: ${{ env.MACOS_APP_NAME }}
+        overwrite: true
+
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup Upgrader
+      uses: seanmiddleditch/gha-setup-vsdevenv@master
+
+    - name: Upgrade project
+      working-directory: ./Win8
+      run: devenv TSLgenerator.sln /Upgrade
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.1
+
+    - name: Build project
+      working-directory: ./Win8
+      run: msbuild TSLgenerator.sln /p:configuration=release
+
+    - name: Upload release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        tag: ${{ github.ref }}
+        file: ./Win8/Release/${{ env.WINDOWS_APP_NAME }}
+        overwrite: true
