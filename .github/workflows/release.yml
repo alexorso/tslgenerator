@@ -1,0 +1,90 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+*"
+
+env:
+  LINUX_APP_NAME: TSLgenerator-linux
+  MACOS_APP_NAME: TSLgenerator-macos
+  WINDOWS_APP_NAME: TSLgenerator.exe
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Create Build directory
+      run: mkdir build
+
+    - name: Run CMake
+      working-directory: ./build
+      run: cmake ../
+
+    - name: Build Project
+      working-directory: ./build
+      run: cmake --build . --config Release
+
+    - name: Upload release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        tag: ${{ github.ref }}
+        file: ./build/tsl
+        asset_name: ${{ env.LINUX_APP_NAME }}
+        overwrite: true
+
+  build-macos:
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Create Build directory
+      run: mkdir build
+
+    - name: Run CMake
+      working-directory: ./build
+      run: cmake ../
+
+    - name: Build Project
+      working-directory: ./build
+      run: cmake --build . --config Release
+
+    - name: Upload release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        tag: ${{ github.ref }}
+        file: ./build/tsl
+        asset_name: ${{ env.MACOS_APP_NAME }}
+        overwrite: true
+
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Create Build directory
+      run: mkdir build
+
+    - name: Run CMake
+      working-directory: ./build
+      run: cmake ../
+
+    - name: Build Project
+      working-directory: ./build
+      run: cmake --build . --config Release
+
+    - name: Upload release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        tag: ${{ github.ref }}
+        file: ./build/Release/tsl.exe
+        asset_name: ${{ env.WINDOWS_APP_NAME }}
+        overwrite: true
