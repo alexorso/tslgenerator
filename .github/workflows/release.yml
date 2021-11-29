@@ -16,16 +16,24 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build release
-      working-directory: ./Linux
-      run: make
+
+    - name: Create Build directory
+      run: mkdir build
+
+    - name: Run CMake
+      working-directory: ./build
+      run: cmake ../
+
+    - name: Build Project
+      working-directory: ./build
+      run: cmake --build . --config Release
 
     - name: Upload release
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         tag: ${{ github.ref }}
-        file: ./Linux/tsl
+        file: ./build/tsl
         asset_name: ${{ env.LINUX_APP_NAME }}
         overwrite: true
 
@@ -34,16 +42,24 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: make
-      working-directory: ./MacOSX
-      run: make
+
+    - name: Create Build directory
+      run: mkdir build
+
+    - name: Run CMake
+      working-directory: ./build
+      run: cmake ../
+
+    - name: Build Project
+      working-directory: ./build
+      run: cmake --build . --config Release
 
     - name: Upload release
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         tag: ${{ github.ref }}
-        file: ./MacOSX/tsl
+        file: ./build/tsl
         asset_name: ${{ env.MACOS_APP_NAME }}
         overwrite: true
 
@@ -51,27 +67,24 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
-    - name: Setup Upgrader
-      uses: seanmiddleditch/gha-setup-vsdevenv@master
+    - name: Create Build directory
+      run: mkdir build
 
-    - name: Upgrade project
-      working-directory: ./Win8
-      run: devenv TSLgenerator.sln /Upgrade
+    - name: Run CMake
+      working-directory: ./build
+      run: cmake ../
 
-    - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v1.1
-
-    - name: Build project
-      working-directory: ./Win8
-      run: msbuild TSLgenerator.sln /p:configuration=release
+    - name: Build Project
+      working-directory: ./build
+      run: cmake --build . --config Release
 
     - name: Upload release
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         tag: ${{ github.ref }}
-        file: ./Win8/Release/${{ env.WINDOWS_APP_NAME }}
+        file: ./build/Release/tsl.exe
+        asset_name: ${{ env.WINDOWS_APP_NAME }}
         overwrite: true

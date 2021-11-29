@@ -1,0 +1,28 @@
+name: Continuous Integration
+
+on:
+  push: {}
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macOS-latest, windows-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Create Build directory
+      run: mkdir build
+
+    - name: Run CMake
+      working-directory: ./build
+      run: cmake ../
+
+    - name: Build Project
+      working-directory: ./build
+      run: cmake --build .
