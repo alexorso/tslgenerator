@@ -86,7 +86,7 @@ int main( int argc, char* argv[] )
         strcpy( filename, in_file );
         strcat( filename, ".tsl" );
         out_file = filename;
-        free(filename);
+        //free(filename);
     }
     
     parse_file();
@@ -116,7 +116,8 @@ int main( int argc, char* argv[] )
     #else
     cleanup();
     #endif
-    
+   
+    free(filename); 
     return EXIT_SUCCESS;
 }
 
