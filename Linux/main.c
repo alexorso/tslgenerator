@@ -1,5 +1,3 @@
-
-
 #include <stdio.h>
 #include <stdlib.h>     /* exit, free */
 #include <string.h>     /* for manipulating filename */
