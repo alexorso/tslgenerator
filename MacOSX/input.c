@@ -346,7 +346,7 @@ void parse_operand( Expression* root, char* start, char* end, boolean operandA )
     {
         if ( not )
             root -> flags = root -> flags | not_flag;
-        *prop = parse_property( start, (size_t) ( end - start ), FALSE );
+        *prop = parse_property( start, (size_t) ( end - start ), TRUE );
     }
 }
 
