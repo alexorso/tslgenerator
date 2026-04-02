@@ -24,7 +24,7 @@ int main_vars_size = sizeof( cats ) + sizeof( props ) + sizeof( short ) * 3 + si
 
 /* local functions */
 Flag parse_args( int num_args, char* args[] );
-void print_man( char* prog_name );
+void print_help( char* prog_name );
 int  cleanup( void );
 int  free_expr( Expression* expr );
 
@@ -57,7 +57,7 @@ int main( int argc, char* argv[] )
 
     if ( argc == 1 )
     {
-        printf( "\nUSAGE:  %s [ --manpage ] [ -cs ] input_file [ -o output_file ]\n\n", argv[0] );
+        printf( "\nUSAGE:  %s [ -h/--help ] [ -cs ] input_file [ -o output_file ]\n\n", argv[0] );
         return EXIT_SUCCESS;
     }
     else
@@ -129,9 +129,9 @@ Flag parse_args( int num_args, char* args[] )
     
     for ( i = 1; i < num_args; i++ )
     {
-        if ( strcmp( args[i], "--manpage" ) == 0 )
+        if ( (strcmp( args[i], "--help" ) == 0) || (strcmp( args[i], "-h" ) == 0) )
         {
-            print_man( args[0] );
+            print_help( args[0] );
             exit( EXIT_SUCCESS );
         }
         
@@ -162,18 +162,18 @@ Flag parse_args( int num_args, char* args[] )
 }
 
 
-/* Print the tsl manpage */
-void print_man( char* prog_name )
+/* Print the tsl help page */
+void print_help( char* prog_name )
 {
     printf( "\nNAME\n\ttsl - generate test frames from a specification file\n" );
-    printf( "\nSYNOPSIS\n\ttsl [ --manpage ] [ -cs ] input_file [ -o output_file ]\n" );
+    printf( "\nSYNOPSIS\n\ttsl [ -h/--help ] [ -cs ] input_file [ -o output_file ]\n" );
     printf( "\nDESCRIPTION\n\tThe TSL utility generates test frames from a specification file\n" );
     printf( "\twritten in the extended Test Specification Language.  By default\n" );
     printf( "\tit writes the test frames to a new file created by appending a\n" );
     printf( "\t'.tsl' extension to the input_file's name.  Options can be used\n" );
     printf( "\tto modify the output.\n" );
     printf( "\nOPTIONS\n\tThe following options are supported:\n" );
-    printf( "\n\t--manpage\n\t\tPrint this man page.\n" );
+    printf( "\n\t-h/--help \n\t\tPrint this help page.\n" );
     printf( "\n\t-c\tReport the number of test frames generated, but don't\n" );
     printf( "\t\twrite them to the output. After the number of frames is\n" );
     printf( "\t\treported you will be given the option of writing them\n" );
