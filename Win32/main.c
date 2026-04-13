@@ -85,8 +85,7 @@ int main( int argc, char* argv[] )
         filename = malloc(sizeof(char) * strlen(in_file) + 4);
         strcpy( filename, in_file );
         strcat( filename, ".tsl" );
-        out_file = filename;
-        free(filename);
+        out_file = filename;        
     }
     
     parse_file();
@@ -117,6 +116,7 @@ int main( int argc, char* argv[] )
     cleanup();
     #endif
     
+    free(filename);
     return EXIT_SUCCESS;
 }
 
